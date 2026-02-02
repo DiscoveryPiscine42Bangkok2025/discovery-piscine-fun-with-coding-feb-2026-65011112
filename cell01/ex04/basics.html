@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basics</title>
+    <style>
+      body {
+        background-color: pink;
+        margin: 0;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        color: white;
+        text-align: center;
+        font-size: 3em;
+        margin: 30px 0;
+      }
+      .shops-container {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 40px 0;
+      }
+      .shop-item {
+        text-align: center;
+      }
+      .shop-item img {
+        max-width: 300px;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+      .shop-item a {
+        display: block;
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .shop-item a:hover {
+        text-decoration: underline;
+      }
+      hr {
+        border: 1px solid #333;
+        margin: 40px 0;
+      }
+      footer {
+        text-align: right;
+        font-style: italic;
+        font-family: monospace;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Basics & More!</h1>
+    <div class="shops-container">
+      <div class="shop-item">
+        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop" alt="Online Shop 1" />
+        <a href="https://www.amazon.com">Amazon</a>
+      </div>
+      <div class="shop-item">
+        <img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=400&h=300&fit=crop" alt="Online Shop 2" />
+        <a href="https://www.ebay.com">eBay</a>
+      </div>
+    </div>
+    <hr />
+    <footer>© wil 2026</footer>
+  </body>
+</html>
