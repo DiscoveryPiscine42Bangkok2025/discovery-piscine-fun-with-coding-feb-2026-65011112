@@ -1,0 +1,43 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* ตั้งค่าพื้นฐานสำหรับ Parallax */
+.parallax {
+    background-attachment: fixed; /* ทำให้รูปอยู่กับที่ขณะเลื่อน */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%; /* ให้สูงเต็มหน้าจอพอดี */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ใส่รูปภาพ (หาไฟล์รูปมาใส่ในโฟลเดอร์เดียวกันนะครับ) */
+.img1 { background-image: url('https://picsum.photos/id/10/1200/800'); }
+.img2 { background-image: url('https://picsum.photos/id/20/1200/800'); }
+
+/* กล่องข้อความตรงกลาง */
+.caption {
+    text-align: center;
+}
+
+.border {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    font-size: 25px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+/* Block สีดำตรงกลาง */
+.content-block {
+    color: #ddd;
+    background-color: #000;
+    text-align: center;
+    padding: 100px 80px;
+}
