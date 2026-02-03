@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Balloon</title>
+    <style>
+        /* สร้างลูกโป่งเริ่มต้น */
+        #balloon {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%; /* ทำให้เป็นวงกลม */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="balloon"></div>
+
+    <script>
+        const balloon = document.getElementById('balloon');
+        let size = 200;
+        const colors = ['red', 'green', 'blue'];
+        let colorIndex = 0;
+
+        // ฟังก์ชันอัปเดตการแสดงผล
+        function updateBalloon() {
+            balloon.style.width = size + 'px';
+            balloon.style.height = size + 'px';
+            balloon.style.backgroundColor = colors[colorIndex];
+        }
+
+        // เมื่อคลิก: ขยายและเปลี่ยนสี (แดง -> เขียว -> น้ำเงิน)
+        balloon.addEventListener('click', () => {
+            size += 10;
+            if (size > 420) {
+                size = 200;
+                colorIndex = 0;
+            } else {
+                colorIndex = (colorIndex + 1) % colors.length;
+            }
+            updateBalloon();
+        });
+
+        // เมื่อเมาส์ออก: หดและเปลี่ยนสีถอยหลัง (น้ำเงิน -> เขียว -> แดง)
+        balloon.addEventListener('mouseleave', () => {
+            if (size > 200) {
+                size -= 5;
+            }
+            // เปลี่ยนสีแบบถอยหลัง: (ปัจจุบัน - 1 + ทั้งหมด) % ทั้งหมด
+            colorIndex = (colorIndex - 1 + colors.length) % colors.length;
+            updateBalloon();
+        });
+    </script>
+</body>
+</html>
