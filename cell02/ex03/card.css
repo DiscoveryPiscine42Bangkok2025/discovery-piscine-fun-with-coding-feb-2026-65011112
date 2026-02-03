@@ -1,0 +1,64 @@
+body {
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.card-container {
+    text-align: center;
+}
+
+.card {
+    background-color: white;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* 2. Invisible Table */
+.invisible-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none; /* มองไม่เห็นเส้นขอบ */
+}
+
+.invisible-table td {
+    padding: 20px;
+}
+
+/* 3. Profile Picture */
+.profile-img {
+    width: 100%;
+    height: auto;
+}
+
+/* 6. Social Icons */
+.social-icons {
+    margin: 15px 0;
+    font-size: 20px;
+}
+
+.social-icons span {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* 7. Contact Button */
+.contact-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-btn:hover {
+    background-color: #333;
+}
