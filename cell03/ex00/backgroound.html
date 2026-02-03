@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Background</title>
+    <link rel="stylesheet" href="backgroound.css">
+</head>
+<body>
+
+    <button id="btn">Click me!</button>
+
+    <script>
+        // เลือกปุ่มและตัว body
+        const btn = document.getElementById('btn');
+        const body = document.body;
+
+        // ฟังก์ชันสุ่มสี Hex
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // เมื่อคลิกปุ่ม ให้เปลี่ยนสีพื้นหลัง
+        btn.addEventListener('click', function() {
+            body.style.backgroundColor = getRandomColor();
+        });
+    </script>
+</body>
+</html>
