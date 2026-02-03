@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <style>
+        body { display: flex; justify-content: center; margin-top: 50px; }
+        .calc-container { border: 1px solid #ccc; padding: 20px; }
+    </style>
+</head>
+<body>
+
+    <div class="calc-container">
+        <input type="text" id="left">
+        <select id="op">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" id="right">
+        <input type="submit" value="Try me!" onclick="calculate()">
+    </div>
+
+    <script>
+        function calculate() {
+            const leftStr = document.getElementById('left').value;
+            const rightStr = document.getElementById('right').value;
+            const op = document.getElementById('op').value;
+
+            // ตรวจสอบว่าเป็นตัวเลขจำนวนเต็มบวกหรือไม่
+            if (!/^\d+$/.test(leftStr) || !/^\d+$/.test(rightStr)) {
+                alert('Error :(');
+                return;
+            }
+
+            const left = parseInt(leftStr);
+            const right = parseInt(rightStr);
+            let result;
+
+            // ตรวจสอบการหารด้วยศูนย์
+            if ((op === '/' || op === '%') && right === 0) {
+                alert("It's over 9000!");
+                console.log("It's over 9000!");
+                return;
+            }
+
+            switch(op) {
+                case '+': result = left + right; break;
+                case '-': result = left - right; break;
+                case '*': result = left * right; break;
+                case '/': result = left / right; break;
+                case '%': result = left % right; break;
+            }
+
+            alert(result);
+            console.log(result);
+        }
+
+        // ตั้งเวลาแจ้งเตือนทุก 30 วินาที
+        setInterval(() => {
+            alert('Please, use me...');
+        }, 30000);
+    </script>
+</body>
+</html>
