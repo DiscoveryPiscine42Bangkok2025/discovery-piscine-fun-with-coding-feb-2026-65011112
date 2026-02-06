@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Portfolio - Rush</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" tabindex="0">
+
+    <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav">
+        <div class="container">
+            <a class="navbar-brand fw-bold gradient-text" href="#">RUSH PROJECT</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    
+                    <li class="nav-item dropdown me-lg-3 my-2 my-lg-0">
+                        <a class="navbar-brand fw-bold gradient-text" href="home.html">
+                        Home
+                        </a>
+
+                        <a class="nav-link dropdown-toggle btn-custom-outline" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-person-circle"></i> <span id="currentMemberName">เลือกสมาชิก (Select Member)</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-dark">
+                            <li><button class="dropdown-item" onclick="switchMember('member1', 'สิริโรจน์ (Member 1)')">1. สิริโรจน์</button></li>
+                            <li><button class="dropdown-item" onclick="switchMember('member2', 'ปฐมพร (Member 2)')">2. ปฐมพร</button></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-list"></i> เมนู (Menu)
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-dark">
+                            <li><a class="dropdown-item" href="#about">About</a></li>
+                            <li><a class="dropdown-item" href="#showcase">Showcase</a></li>
+                            <li><hr class="dropdown-divider bg-secondary"></li>
+                            <li><a class="dropdown-item" href="#contact">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="about" class="d-flex align-items-center">
+        <div class="container">
+            
+            <div class="member-content member1">
+                <div class="row align-items-center">
+                    <div class="col-md-5 text-center mb-5 mb-md-0 position-relative">
+                        <div class="blob-bg"></div> <img src="object\profile2.jpg" alt="สิริโรจน์" class="profile-img">
+                    </div>
+                    <div class="col-md-7 text-white">
+                        <span class="badge bg-gradient-primary mb-2">MEMBER 01</span>
+                        <h1 class="display-3 fw-bold">สิริโรจน์ <span class="gradient-text">ชัยนิธิคุณ</span></h1>
+                        <p class="lead text-gray-300 mt-3">
+                            Agriculture Intelligence Engineering | KMITL
+                        </p>
+                        <p class="text-gray-400">
+                            ผมเรียนจบสายวิทย์ - คณิต เกรดเฉลี่ย 4.00
+                            ปริญญาตรี เกรดเฉลี่ย 2.99
+                            ชอบวิชาคณิตศาสตร์
+                            ชอบอ่านการ์ตูน และอ่านหนังสือประวัติศาสตร์
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-content member2 d-none">
+                <div class="row align-items-center">
+                    <div class="col-md-5 text-center mb-5 mb-md-0 position-relative">
+                        <div class="blob-bg blob-2"></div>
+                        <img src="object\profile1.jpg" alt="ปฐมพร" class="profile-img">
+                    </div>
+                    <div class="col-md-7 text-white">
+                        <span class="badge bg-gradient-warning mb-2 text-dark">MEMBER 02</span>
+                        <h1 class="display-3 fw-bold">ปฐมพร <span class="gradient-text-warning">หยังหลัง</span></h1>
+                        <p class="lead text-gray-300 mt-3">
+                            Agriculture Intelligence Engineering | KMITL
+                        </p>
+                        <p class="text-gray-400">
+                            ผมเรียนจบสายวิทย์ - คณิต เกรดเฉลี่ย 3.87
+                            ปริญญาตรี เกรดเฉลี่ย 2.82
+                            ชอบวิชาคณิตศาสตร์ คอมพิวเตอร์
+                            ชอบเล่นเกม มีความสามารถด้าน PLC เบื้องต้น
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="showcase" class="bg-darker">
+        <div class="container">
+            <h2 class="text-center fw-bold text-white mb-5 section-title">Skills & Qualifications</h2>
+
+            <div class="member-content member1">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="modern-card">
+                            <div class="card-img-wrapper">
+                                <img src="https://scontent.fbkk18-2.fna.fbcdn.net/v/t39.30808-6/471250763_1943280779493289_872082237094482181_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=86c6b0&_nc_ohc=CBg2cw65IY4Q7kNvwE59R6L&_nc_oc=AdlSj8ONF6hevu3TXjiX0vKmKHHD4OX_MI5vzNPhr-DdU_7s5UjvUR0NZCUYPvmPF0A&_nc_zt=23&_nc_ht=scontent.fbkk18-2.fna&_nc_gid=KTDz_cZ97Wpd6fogvNW_3Q&oh=00_Afv0F19bYtM0rYcCA5TBP6TOIORPzxKiiLaaBrdgoMFhQA&oe=698A2A3B" class="card-img-top">
+                            </div>
+                            <div class="card-body p-4 text-center">
+                                <h4 class="text-primary fw-bold">รางวัลที่ 108 ของ รร.นครสวรรค์</h4>
+                                <p class="text-gray-400">แข่งขันบาสเก็ตบอลชายระดับโรงเรียน แข่งทั้งหมด 109 ทีม</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="modern-card">
+                            <div class="card-img-wrapper">
+                                <img src="https://www.winitchai.co.th/images/editor/Picture7.jpg" class="card-img-top">
+                            </div>
+                            <div class="card-body p-4 text-center">
+                                <h4 class="text-primary fw-bold">ระบบรดน้ำทุเรียน</h4>
+                                <p class="text-gray-400">ระบบ IoT ในมือถือสำหรับรดน้ำให้กับสวนทุเรียน และเก็บข้อมูล (ทุกวันนี้ไม่ได้ใช้งาน)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="modern-card">
+                            <div class="card-img-wrapper">
+                                <img src="https://www.certifiedangusbeef.com/_next/image?url=https%3A%2F%2Fappetizing-cactus-7139e93734.media.strapiapp.com%2FUltimate_Beef_Wellington_1bad1b820f.jpeg&w=3840&q=75" class="card-img-top">
+                            </div>
+                            <div class="card-body p-4 text-center">
+                                <h4 class="text-primary fw-bold">รางวัลที่ 1 ทำอาหาร</h4>
+                                <p class="text-gray-400">แข่งทำอาหารคนเดียวที่บ้าน 41/9 หมู่ 10 ท่าทอง เมนู beef wellington</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="member-content member2 d-none">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="modern-card">
+                            <div class="card-img-wrapper">
+                                <img src="object/screenshot.png"> class="card-img-top">
+                            </div>
+                            <div class="card-body p-4 text-center">
+                                <h4 class="text-warning fw-bold">ยอดนักปรุง</h4>
+                                <p class="text-gray-400">มีความสามารถในการทำอาหาร ไม่ว่าจะเป็นอาหารไทย อาหารฝรั่ง หรืออาหารจีน</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="modern-card">
+                            <div class="card-img-wrapper">
+                                <img src="object\S__3412432_0.jpg" class="card-img-top">
+                            </div>
+                            <div class="card-body p-4 text-center">
+                                <h4 class="text-warning fw-bold">การเปรียบเทียบการเจริญเติบโตและผลผลิตของการปรับปรุงการปลูกพืช
+</h4>
+                                <p class="text-gray-400">พัฒนาระบบปลูกพืชไฮโดรโปนิกส์ เพื่อเพิ่มผลผลิตและลดต้นทุน</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="modern-card">
+                            <div class="card-img-wrapper">
+                                <img src="https://scontent.fbkk9-2.fna.fbcdn.net/v/t1.6435-9/126018476_923939408131467_3928118091414186784_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=f727a1&_nc_ohc=MorSr1_07_0Q7kNvwFCVksc&_nc_oc=Adl6Aj7xRbedaQI30MpAAALHAVgFklwMn056UmFX7MVCTW_l-2h0Nu0QNpE-1VWWOkFTVJLCDST5gq9429VbJi6v&_nc_zt=23&_nc_ht=scontent.fbkk9-2.fna&_nc_gid=0sY71KgDLs73C6FylrsdFw&oh=00_AftluSiGyA9wCRr7F-YfMJvi94opDq_XFmLkP-UV8MJ0VA&oe=69AC2C8D" class="card-img-top">
+                            </div>
+                            <div class="card-body p-4 text-center">
+                                <h4 class="text-warning fw-bold">นักถ่ายภาพยอดเยี่ยม</h4>
+                                <p class="text-gray-400">ถ่ายไปเรื่อยสวยไม่สวยไม่รู้ ขอให้ได้ถ่าย</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="text-center fw-bold text-white mb-5 section-title">Contact</h2>
+            
+            <div class="member-content member1">
+                <p class="text-center text-gray-400 mb-4">ช่องทางติดต่อของ : <span class="text-primary fw-bold">สิริโรจน์ ชัยนิธิคุณ</span></p>
+                
+                <div class="d-flex flex-column align-items-center gap-3">
+                    <a href="https://facebook.com" target="_blank" class="contact-btn fb">
+                        <i class="bi bi-facebook"></i> Late Siriroj
+                    </a>
+                    <a href="mailto:email@test.com" class="contact-btn mail">
+                        <i class="bi bi-envelope-fill"></i> 65011112@kmitl.ac.th
+                    </a>
+                    <a href="https://line.me" target="_blank" class="contact-btn line">
+                        <i class="bi bi-chat-dots-fill"></i> late.28.2.47
+                    </a>
+                </div>
+            </div>
+
+            <div class="member-content member2 d-none">
+                <p class="text-center text-gray-400 mb-4">ช่องทางติดต่อของ : <span class="text-warning fw-bold">ปฐมพร หยังหลัง</span></p>
+                
+                <div class="d-flex flex-column align-items-center gap-3">
+                    <a href="https://www.facebook.com/pathomporn.yanglang" target="_blank" class="contact-btn fb">
+                        <i class="bi bi-facebook"></i> Pathomporn Yanglang
+                    </a>
+                    <a href="65010577@kmitl.ac.th" class="contact-btn mail">
+                        <i class="bi bi-envelope-fill"></i> 65010577@kmitl.ac.th
+                    </a>
+                    <a href="https://line.me/ti/p/5fFF3crv59" target="_blank" class="contact-btn line">
+                        <i class="bi bi-chat-dots-fill"></i> ID : fan0950165299
+                    </a>
+                </div>
+            </div>
+
+            <hr class="my-5 border-gray">
+            <p class="text-center small text-gray-500">&copy; 2026 Rush Project.</p>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
